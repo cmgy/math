@@ -1,6 +1,5 @@
 package com.cmgy.sword.list;
 
-import com.cmgy.sword.list.ListNode;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,8 +10,8 @@ public class Solution11 {
 
     public ListNode FindKthToTail(ListNode head, int k) {
 
-        ListNode listNode=head;
-        int length=0;
+        ListNode listNode = head;
+        int length = 0;
         if (head != null) {
             length = 1;
             while (listNode.next != null) {
@@ -24,7 +23,7 @@ public class Solution11 {
 
         int target = length - k + 1;
 
-        ListNode currentNode=head;
+        ListNode currentNode = head;
         int current = 1;
         while (current != target && currentNode != null) {
 
@@ -43,11 +42,11 @@ public class Solution11 {
         head.next.next.next = new ListNode(9);
         head.next.next.next.next = new ListNode(1);
 
-        Assert.assertEquals(1,FindKthToTail(head,1).val);
-        Assert.assertEquals(9,FindKthToTail(head,2).val);
-        Assert.assertEquals(4,FindKthToTail(head,3).val);
-        Assert.assertEquals(2,FindKthToTail(head,4).val);
-        Assert.assertEquals(6,FindKthToTail(head,5).val);
+        Assert.assertEquals(1, FindKthToTail(head, 1).val);
+        Assert.assertEquals(9, FindKthToTail(head, 2).val);
+        Assert.assertEquals(4, FindKthToTail(head, 3).val);
+        Assert.assertEquals(2, FindKthToTail(head, 4).val);
+        Assert.assertEquals(6, FindKthToTail(head, 5).val);
 
     }
 }
